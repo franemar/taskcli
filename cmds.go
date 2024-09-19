@@ -192,7 +192,19 @@ var kanbanCmd = &cobra.Command{
 		todoCol := kancli.NewColumn(tasksToItems(todos), todo, true)
 		iprCol := kancli.NewColumn(tasksToItems(ipr), inProgress, false)
 		doneCol := kancli.NewColumn(tasksToItems(finished), done, false)
+                
+		/*onMoveItem := func(msg kancli.MoveMsg) {
+			s := status(msg.I)
+			item := msg.Item.(task)
+			item.merge(task{Status: s.String()})
+			t.update(item)
+		}
+
+		board := kancli.NewDefaultBoard([]kancli.Column{todoCol, iprCol, doneCol}, onMoveItem)
+		*/
+
 		board := kancli.NewDefaultBoard([]kancli.Column{todoCol, iprCol, doneCol})
+
 		p := tea.NewProgram(board)
 		_, err = p.Run()
 		return err
