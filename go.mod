@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/charmbracelet/bubbles v0.16.1
 	github.com/charmbracelet/bubbletea v0.24.2
-	github.com/charmbracelet/kancli v0.0.0-20230629174247-b2093471047b
+        github.com/charmbracelet/kancli v0.0.0-20230629174247-b2093471047b
 	github.com/charmbracelet/lipgloss v0.9.1
 	github.com/mattn/go-sqlite3 v1.14.17
 	github.com/muesli/go-app-paths v0.2.2

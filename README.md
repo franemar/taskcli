@@ -1,42 +1,62 @@
-# Creating a Task Manager (a Charm Tutorial)
+# Go's CLI Task Manager - Taskwarrior compatible (WIP)
 
-This project is inspired by the incredible work on Task Warrior, an open source
-CLI task manager. I use this project quite a bit for managing my projects
-without leaving the safety and comfort of my terminal. (⌐■_■)
+This project is forked from the Charm's [Creating a Task Manager](https://github.com/charmbracelet/taskcli) 
+tutorial.  I use Taskwarrior very often for managing my tasks, but I've been looking 
+for a Task Warrior compatible CLI app based neither in C/C++ nor Java.
 
-We built a kanban board TUI in a previous [tutorial][kanban-video], so the
-idea here is that we're going to build a task management CLI with [Cobra][cobra] that has Lip Gloss
-styles *and* can be viewed using our kanban board.
+Charm's original idea was to built a task management CLI using [Cobra][cobra], with Lip Gloss
+styles *and* viewable using their kanban board.
 
-*Note: We walk through the code explaining each and every piece of it in the
-[corresponding video](https://youtu.be/yiFhQGJeRJk) for this tutorial. Enjoy!!*
+## Roadmap
 
-Here's the plan:
+- [x] Test all current functionality.
+- [ ] Document issues and needs for improvement.
+- [ ] Propose enhacements.
+- [ ] Review project's layout.
+- [ ] Plan backend technology migration.
 
-## Checklist
+### Tests
 
-If you're following along with our tutorials for this project, or even if you
-want to try and tackle it yourself first, then look at our solutions, here's
-what you need to do:
+#### Data Storage
+- [x] Set up a SQLite database.
+    - [x] open SQLite DB
+    - [x] add task
+    - [x] delete task
+    - [x] edit task
+    - [x] get tasks
 
-### Data Storage
-- [ ] set up a SQLite database
-    - [ ] open SQLite DB
+#### Making a CLI with Cobra
+- [x] add CLI
+    - [x] add task
+    - [x] delete task
+    - [x] edit task
+    - [x] get tasks
+
+#### Add a little... *Je ne sais quoi*
+- [x] print to table layout with [Lip Gloss][lipgloss]
+- [x] print to Kanban layout with [Lip Gloss][lipgloss]
+
+### Pending tasks
+
+#### Data Storage
+- [ ] Change backend to document/key-value.
+    - [ ] open DB?
     - [ ] add task
     - [ ] delete task
     - [ ] edit task
     - [ ] get tasks
 
-### Making a CLI with Cobra
-- [ ] add CLI
-    - [ ] add task
-    - [ ] delete task
-    - [ ] edit task
-    - [ ] get tasks
+#### Making a CLI with Cobra
+- [x] add CLI
+    - [x] add task
+    - [x] delete task
+    - [x] edit task
+    - [x] get tasks
 
-### Add a little... *Je ne sais quoi*
-- [ ] print to table layout with [Lip Gloss][lipgloss]
-- [ ] print to Kanban layout with [Lip Gloss][lipgloss]
+#### Add a little... *Je ne sais quoi*
+- [x] print to table layout with [Lip Gloss][lipgloss]
+- [x] print to Kanban layout with [Lip Gloss][lipgloss]: current status is very incomplete.
+
 
 ## Project Layout
 
